@@ -61,7 +61,7 @@ const NumbersThatSpeak: React.FC<NumbersThatSpeakProps> = ({
         } as React.CSSProperties
       }
       role="img"
-      aria-label="Financial dashboard showing invoiced revenue charts"
+      aria-label="Dashboard financeiro mostrando gráficos de receita de laudos"
       data-name="Numbers that speak"
       data-node-id="454:5856"
     >
@@ -259,7 +259,7 @@ const NumbersThatSpeak: React.FC<NumbersThatSpeakProps> = ({
                               whiteSpace: "pre",
                             }}
                           >
-                            Invoiced Revenue
+                            Receita de Laudos
                           </div>
                           <div
                             className="tracking-widest"
@@ -273,7 +273,7 @@ const NumbersThatSpeak: React.FC<NumbersThatSpeakProps> = ({
                               whiteSpace: "pre",
                             }}
                           >
-                            $317,731.00
+                            R$ 1.847.231,00
                           </div>
                         </div>
                       </div>
@@ -462,8 +462,8 @@ const NumbersThatSpeak: React.FC<NumbersThatSpeakProps> = ({
                                     width: "100%",
                                   }}
                                 >
-                                  <div style={{ whiteSpace: "pre" }}>Aug 2023</div>
-                                  <div style={{ whiteSpace: "pre" }}>Aug 2024</div>
+                                  <div style={{ whiteSpace: "pre" }}>Ago 2023</div>
+                                  <div style={{ whiteSpace: "pre" }}>Ago 2024</div>
                                 </div>
                               </div>
                             </div>

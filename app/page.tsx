@@ -38,7 +38,7 @@ export default function LandingPage() {
       setProgress((prev) => {
         if (prev >= 100) {
           if (mountedRef.current) {
-            setActiveCard((current) => (current + 1) % 3)
+            setActiveCard((current) => (current + 1) % 4)
           }
           return 0
         }
@@ -72,6 +72,8 @@ export default function LandingPage() {
         return <div className="text-[#828387] text-sm">Analytics Empresarial - Insights em Tempo Real</div>
       case 2:
         return <div className="text-[#828387] text-sm">Integração API - Fluxo de Trabalho Perfeito</div>
+      case 3:
+        return <div className="text-[#828387] text-sm">Painel de Controle - Visão Geral Administrativa</div>
       default:
         return <div className="text-[#828387] text-sm">Dashboard de Geração de Laudos com IA</div>
     }
@@ -181,8 +183,8 @@ export default function LandingPage() {
                           }`}
                         >
                           <img
-                            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dsadsadsa.jpg-xTHS4hGwCWp2H5bTj8np6DXZUyrxX7.jpeg"
-                            alt="Dashboard de Laudos - Gestão de Relatórios Empresariais"
+                            src="/central-memoria-ia.png"
+                            alt="Central de Memória IA - Dashboard de Laudos Radiológicos"
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -194,8 +196,8 @@ export default function LandingPage() {
                           }`}
                         >
                           <img
-                            src="/analytics-dashboard-with-charts-graphs-and-data-vi.jpg"
-                            alt="Dashboard de Analytics"
+                            src="/central-achados-criticos.png"
+                            alt="Central de Achados Críticos - Monitoramento de Laudos"
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -207,9 +209,22 @@ export default function LandingPage() {
                           }`}
                         >
                           <img
-                            src="/data-visualization-dashboard-with-interactive-char.jpg"
-                            alt="Dashboard de Visualização de Dados"
-                            className="w-full h-full object-contain" // Changed from object-cover to object-contain to preserve landscape aspect ratio
+                            src="/editor-laudos.png"
+                            alt="Editor de Laudos - Interface de Criação de Relatórios"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+
+                        {/* Product Image 4 - Control Panel */}
+                        <div
+                          className={`absolute inset-0 transition-all duration-500 ease-in-out ${
+                            activeCard === 3 ? "opacity-100 scale-100 blur-0" : "opacity-0 scale-95 blur-sm"
+                          }`}
+                        >
+                          <img
+                            src="/painel-controle.png"
+                            alt="Painel de Controle - Dashboard Administrativo com Métricas"
+                            className="w-full h-full object-cover"
                           />
                         </div>
                       </div>
@@ -234,25 +249,32 @@ export default function LandingPage() {
                 <div className="flex-1 px-0 sm:px-2 md:px-0 flex flex-col md:flex-row justify-center items-stretch gap-0">
                   {/* Feature Cards */}
                   <FeatureCard
-                    title="Gere laudos instantaneamente"
-                    description="Crie relatórios abrangentes em segundos usando modelos de IA avançados treinados em dados empresariais."
+                    title="Central de Memória IA"
+                    description="Base de conhecimento inteligente que armazena e aprende com cada laudo por usuário. Sistema adaptativo com qualidade validada que evolui continuamente."
                     isActive={activeCard === 0}
                     progress={activeCard === 0 ? progress : 0}
                     onClick={() => handleCardClick(0)}
                   />
                   <FeatureCard
-                    title="API de nível empresarial"
-                    description="Infraestrutura de API escalável com 99,9% de uptime, conformidade SOC2 e segurança empresarial."
+                    title="Achados Críticos em Tempo Real"
+                    description="Monitoramento contínuo identifica 110 achados de alta prioridade. Sistema SHIELD detecta automaticamente lesões críticas para ação imediata."
                     isActive={activeCard === 1}
                     progress={activeCard === 1 ? progress : 0}
                     onClick={() => handleCardClick(1)}
                   />
                   <FeatureCard
-                    title="Integração perfeita"
-                    description="API RESTful com SDKs para linguagens populares. Integre em minutos, não meses."
+                    title="Editor de Laudos Inteligente"
+                    description="Interface completa para criação de laudos com modelos pré-configurados, ditado por voz e integração com histórico de exames radiológicos."
                     isActive={activeCard === 2}
                     progress={activeCard === 2 ? progress : 0}
                     onClick={() => handleCardClick(2)}
+                  />
+                  <FeatureCard
+                    title="Painel de Controle Executivo"
+                    description="Dashboard administrativo com métricas de performance, atividade semanal e tempo economizado. Visão completa da operação com 196 laudos processados."
+                    isActive={activeCard === 3}
+                    progress={activeCard === 3 ? progress : 0}
+                    onClick={() => handleCardClick(3)}
                   />
                 </div>
 
@@ -296,9 +318,9 @@ export default function LandingPage() {
                       Confiança de líderes empresariais
                     </div>
                     <div className="self-stretch text-center text-[#605A57] text-sm sm:text-base font-normal leading-6 sm:leading-7 font-sans">
-                      Empresas Fortune 500 confiam em nossa API de IA
+                      Hospitais e clínicas líderes confiam em nossa API de IA
                       <br className="hidden sm:block" />
-                      para gerar milhões de laudos com precisão e velocidade.
+                      para processar milhares de laudos com precisão médica certificada.
                     </div>
                   </div>
                 </div>
@@ -317,43 +339,24 @@ export default function LandingPage() {
                     </div>
                   </div>
 
-                  <div className="flex-1 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 gap-0 border-l border-r border-[rgba(55,50,47,0.12)]">
-                    {/* Logo Grid - Responsive grid */}
-                    {Array.from({ length: 8 }).map((_, index) => {
-                      const isMobileFirstColumn = index % 2 === 0
-                      const isMobileLastColumn = index % 2 === 1
-                      const isDesktopFirstColumn = index % 4 === 0
-                      const isDesktopLastColumn = index % 4 === 3
-                      const isMobileBottomRow = index >= 6
-                      const isDesktopTopRow = index < 4
-                      const isDesktopBottomRow = index >= 4
+                  <div className="flex-1 grid grid-cols-2 gap-0 border-l border-r border-[rgba(55,50,47,0.12)]">
+                    {/* STAR Logo */}
+                    <div className="h-24 xs:h-28 sm:h-32 md:h-36 lg:h-40 flex justify-center items-center gap-1 xs:gap-2 sm:gap-3 border-r-[0.5px] border-b border-[#E3E2E1]">
+                      <img
+                        src="/star-logo.png"
+                        alt="STAR - Parceiro Tecnológico"
+                        className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto object-contain"
+                      />
+                    </div>
 
-                      return (
-                        <div
-                          key={index}
-                          className={`
-                            h-24 xs:h-28 sm:h-32 md:h-36 lg:h-40 flex justify-center items-center gap-1 xs:gap-2 sm:gap-3
-                            border-b border-[rgba(227,226,225,0.5)]
-                            ${index < 6 ? "sm:border-b-[0.5px]" : "sm:border-b"}
-                            ${index >= 6 ? "border-b" : ""}
-                            ${isMobileFirstColumn ? "border-r-[0.5px]" : ""}
-                            sm:border-r-[0.5px] sm:border-l-0
-                            ${isDesktopFirstColumn ? "md:border-l" : "md:border-l-[0.5px]"}
-                            ${isDesktopLastColumn ? "md:border-r" : "md:border-r-[0.5px]"}
-                            ${isDesktopTopRow ? "md:border-b-[0.5px]" : ""}
-                            ${isDesktopBottomRow ? "md:border-t-[0.5px] md:border-b" : ""}
-                            border-[#E3E2E1]
-                          `}
-                        >
-                          <div className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 relative shadow-[0px_-4px_8px_rgba(255,255,255,0.64)_inset] overflow-hidden rounded-full">
-                            <img src="/horizon-icon.svg" alt="Horizon" className="w-full h-full object-contain" />
-                          </div>
-                          <div className="text-center flex justify-center flex-col text-[#37322F] text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-tight md:leading-9 font-sans">
-                            Acute
-                          </div>
-                        </div>
-                      )
-                    })}
+                    {/* Mobile Med Logo */}
+                    <div className="h-24 xs:h-28 sm:h-32 md:h-36 lg:h-40 flex justify-center items-center gap-1 xs:gap-2 sm:gap-3 border-b border-[#E3E2E1]">
+                      <img
+                        src="/mobile-med-logo.png"
+                        alt="Mobile Med - Parceiro Médico"
+                        className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto object-contain"
+                      />
+                    </div>
                   </div>
 
                   <div className="w-4 sm:w-6 md:w-8 lg:w-12 self-stretch relative overflow-hidden">
@@ -387,11 +390,11 @@ export default function LandingPage() {
                       text="Grade Bento"
                     />
                     <div className="w-full max-w-[598.06px] lg:w-[598.06px] text-center flex justify-center flex-col text-[#49423D] text-xl sm:text-2xl md:text-3xl lg:text-5xl font-semibold leading-tight md:leading-[60px] font-sans tracking-tight">
-                      Construído para clareza absoluta e trabalho focado
+                      Construído para precisão absoluta e laudos focados
                     </div>
                     <div className="self-stretch text-center text-[#605A57] text-sm sm:text-base font-normal leading-6 sm:leading-7 font-sans">
                       Mantenha o foco com ferramentas que organizam, conectam
-                      <br />e transformam informação em decisões confiantes.
+                      <br />e transformam exames em laudos radiológicos precisos.
                     </div>
                   </div>
                 </div>
@@ -415,11 +418,11 @@ export default function LandingPage() {
                     <div className="border-b border-r-0 md:border-r border-[rgba(55,50,47,0.12)] p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6">
                       <div className="flex flex-col gap-2">
                         <h3 className="text-[#37322F] text-lg sm:text-xl font-semibold leading-tight font-sans">
-                          Inteligência alimentada por IA
+                          IA Especializada em Radiologia
                         </h3>
                         <p className="text-[#605A57] text-sm md:text-base font-normal leading-relaxed font-sans">
-                          Modelos de linguagem avançados entendem contexto e geram laudos que atendem perfeitamente aos
-                          requisitos do seu negócio.
+                          Modelos de IA treinados especificamente em radiologia entendem contexto médico e geram laudos
+                          que atendem perfeitamente aos padrões clínicos brasileiros.
                         </p>
                       </div>
                       <div className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-lg flex items-center justify-center overflow-hidden">
@@ -436,11 +439,11 @@ export default function LandingPage() {
                     <div className="border-b border-[rgba(55,50,47,0.12)] p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6">
                       <div className="flex flex-col gap-2">
                         <h3 className="text-[#37322F] font-semibold leading-tight font-sans text-lg sm:text-xl">
-                          Segurança de nível empresarial
+                          Conformidade LGPD e CFM
                         </h3>
                         <p className="text-[#605A57] text-sm md:text-base font-normal leading-relaxed font-sans">
-                          Certificado SOC2 Tipo II com criptografia ponta a ponta. Seus dados permanecem seguros e
-                          conformes em todos os fluxos de trabalho.
+                          Certificado para dados médicos com criptografia ponta a ponta. Seus laudos permanecem seguros
+                          e conformes com LGPD e regulamentações do CFM.
                         </p>
                       </div>
                       <div className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-lg flex overflow-hidden text-right items-center justify-center">
@@ -457,11 +460,11 @@ export default function LandingPage() {
                     <div className="border-r-0 md:border-r border-[rgba(55,50,47,0.12)] p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6 bg-transparent">
                       <div className="flex flex-col gap-2">
                         <h3 className="text-[#37322F] text-lg sm:text-xl font-semibold leading-tight font-sans">
-                          Integração API RESTful
+                          Integração PACS/RIS Nativa
                         </h3>
                         <p className="text-[#605A57] text-sm md:text-base font-normal leading-relaxed font-sans">
-                          Endpoints REST simples com SDKs abrangentes. Integre geração de laudos aos seus sistemas
-                          existentes em minutos.
+                          API REST compatível com DICOM e HL7. Integre geração de laudos aos seus sistemas PACS, RIS e
+                          HIS existentes em minutos.
                         </p>
                       </div>
                       <div className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-lg flex overflow-hidden justify-center items-center relative bg-transparent">
@@ -477,11 +480,11 @@ export default function LandingPage() {
                     <div className="p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6">
                       <div className="flex flex-col gap-2">
                         <h3 className="text-[#37322F] text-lg sm:text-xl font-semibold leading-tight font-sans">
-                          Escale com confiança
+                          Escale para Hospitais e Clínicas
                         </h3>
                         <p className="text-[#605A57] text-sm md:text-base font-normal leading-relaxed font-sans">
-                          Processe milhões de requisições com 99,9% de uptime. Construído para escala empresarial com
-                          infraestrutura global.
+                          Processe milhares de exames com 99,9% de uptime. Construído para escala hospitalar com
+                          infraestrutura nacional e suporte 24/7.
                         </p>
                       </div>
                       <div className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-lg flex overflow-hidden items-center justify-center relative">
