@@ -19,10 +19,10 @@ const instrumentSerif = Instrument_Serif({
 })
 
 export const metadata: Metadata = {
-  title: "laudos.ai - AI-Powered Reports for Enterprise",
+  title: "laudos.ai - IA para Laudos Radiológicos | Convênios de Saúde",
   description:
-    "Generate comprehensive reports instantly with our AI API designed for enterprise workflows and compliance. Trusted by Fortune 500 companies.",
-    generator: 'v0.app'
+    "Gere laudos radiológicos precisos instantaneamente com nossa API de IA. Integração com sistemas hospitalares e convênios de saúde. Confiado por grandes redes de saúde brasileiras.",
+  generator: "v0.app",
 }
 
 export default function RootLayout({
@@ -31,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${instrumentSerif.variable} antialiased`}>
+    <html lang="pt-BR" className={`${inter.variable} ${instrumentSerif.variable} antialiased`}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

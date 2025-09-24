@@ -21,19 +21,17 @@ export default function DocumentationSection() {
 
   const cards = [
     {
-      title: "Gere laudos personalizados",
-      description: "Explore seus dados, construa seu dashboard,\nuna sua equipe em uma plataforma.",
-      image: "/modern-dashboard-interface-with-data-visualization.jpg",
+      title: "Gere laudos radiológicos personalizados",
+      description:
+        "Analise exames de imagem, gere laudos precisos,\nintegre com sistemas hospitalares em uma plataforma.",
     },
     {
-      title: "Dados para insights em minutos",
-      description: "Transforme dados brutos em insights acionáveis\ncom ferramentas de análise poderosas.",
-      image: "/analytics-dashboard.png",
+      title: "Dados médicos para insights em minutos",
+      description: "Transforme dados de exames em insights clínicos\ncom ferramentas de análise radiológica avançadas.",
     },
     {
-      title: "Colabore perfeitamente",
-      description: "Trabalhe junto em tempo real com sua equipe\ne compartilhe insights instantaneamente.",
-      image: "/team-collaboration-interface-with-shared-workspace.jpg",
+      title: "Colabore com equipes médicas",
+      description: "Trabalhe junto com radiologistas em tempo real\ne compartilhe laudos instantaneamente com médicos.",
     },
   ]
 
@@ -63,12 +61,12 @@ export default function DocumentationSection() {
             text="Recursos da Plataforma"
           />
           <div className="self-stretch text-center flex justify-center flex-col text-[#49423D] text-3xl md:text-5xl font-semibold leading-tight md:leading-[60px] font-sans tracking-tight">
-            Otimize suas operações empresariais
+            Otimize suas operações de saúde
           </div>
           <div className="self-stretch text-center text-[#605A57] text-base font-normal leading-7 font-sans">
-            Gerencie laudos, analise dados e colabore com sua equipe
+            Gerencie laudos radiológicos, analise exames médicos e colabore com equipes
             <br />
-            tudo em uma plataforma poderosa.
+            tudo em uma plataforma especializada em saúde.
           </div>
         </div>
       </div>
