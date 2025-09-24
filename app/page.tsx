@@ -38,7 +38,7 @@ export default function LandingPage() {
       setProgress((prev) => {
         if (prev >= 100) {
           if (mountedRef.current) {
-            setActiveCard((current) => (current + 1) % 4)
+            setActiveCard((current) => (current + 1) % 5)
           }
           return 0
         }
@@ -74,6 +74,8 @@ export default function LandingPage() {
         return <div className="text-[#828387] text-sm">Integração API - Fluxo de Trabalho Perfeito</div>
       case 3:
         return <div className="text-[#828387] text-sm">Painel de Controle - Visão Geral Administrativa</div>
+      case 4:
+        return <div className="text-[#828387] text-sm">Gestão de Laudos - Priorização e Comunicação</div>
       default:
         return <div className="text-[#828387] text-sm">Dashboard de Geração de Laudos com IA</div>
     }
@@ -227,6 +229,19 @@ export default function LandingPage() {
                             className="w-full h-full object-cover"
                           />
                         </div>
+
+                        {/* Product Image 5 - Detailed Reports List */}
+                        <div
+                          className={`absolute inset-0 transition-all duration-500 ease-in-out ${
+                            activeCard === 4 ? "opacity-100 scale-100 blur-0" : "opacity-0 scale-95 blur-sm"
+                          }`}
+                        >
+                          <img
+                            src="/lista-laudos-detalhada.png"
+                            alt="Lista de Laudos Detalhada - Gestão e Priorização de Achados Críticos"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -275,6 +290,13 @@ export default function LandingPage() {
                     isActive={activeCard === 3}
                     progress={activeCard === 3 ? progress : 0}
                     onClick={() => handleCardClick(3)}
+                  />
+                  <FeatureCard
+                    title="Gestão Inteligente de Laudos"
+                    description="Sistema completo de priorização automática com comunicação integrada. Gerencie achados críticos, lesões osteolíticas e linfondomeglias com notificações por e-mail, SMS e WhatsApp."
+                    isActive={activeCard === 4}
+                    progress={activeCard === 4 ? progress : 0}
+                    onClick={() => handleCardClick(4)}
                   />
                 </div>
 

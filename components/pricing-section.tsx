@@ -21,285 +21,228 @@ export default function PricingSection() {
   }
 
   return (
-    <div className="w-full flex flex-col justify-center items-center gap-2">
+    <div className="w-full py-20 px-4 bg-gradient-to-b from-gray-50/50 to-white">
       {/* Header Section */}
-      <div className="self-stretch px-6 md:px-24 py-12 md:py-16 border-b border-[rgba(55,50,47,0.12)] flex justify-center items-center gap-6">
-        <div className="w-full max-w-[586px] px-6 py-5 shadow-[0px_2px_4px_rgba(50,45,43,0.06)] overflow-hidden rounded-lg flex flex-col justify-start items-center gap-4 shadow-none">
-          {/* Pricing Badge */}
-          <div className="px-[14px] py-[6px] bg-white shadow-[0px_0px_0px_4px_rgba(55,50,47,0.05)] overflow-hidden rounded-[90px] flex justify-start items-center gap-[8px] border border-[rgba(2,6,23,0.08)] shadow-xs">
-            <div className="w-[14px] h-[14px] relative overflow-hidden flex items-center justify-center">
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M6 1V11M8.5 3H4.75C4.28587 3 3.84075 3.18437 3.51256 3.51256C3.18437 3.84075 3 4.28587 3 4.75C3 5.21413 3.18437 5.65925 3.51256 5.98744C3.84075 6.31563 4.28587 6.5 4.75 6.5H7.25C7.71413 6.5 8.15925 6.68437 8.48744 7.01256C8.81563 7.34075 9 7.78587 9 8.25C9 8.71413 8.81563 9.15925 8.48744 9.48744C8.15925 9.81563 7.71413 10 7.25 10H3.5"
-                  stroke="#37322F"
-                  strokeWidth="1"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-            <div className="text-center flex justify-center flex-col text-[#37322F] text-xs font-medium leading-3 font-sans">
-              Planos & Preços
-            </div>
-          </div>
+      <div className="max-w-4xl mx-auto text-center mb-16">
+        <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200/50 rounded-full mb-8 shadow-sm">
+          <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full"></div>
+          <span className="text-sm font-semibold text-blue-700">Planos & Preços</span>
+        </div>
 
-          <div className="self-stretch text-center flex justify-center flex-col text-[#49423D] text-3xl md:text-5xl font-semibold leading-tight md:leading-[60px] font-sans tracking-tight">
-            Escolha o plano ideal para sua clínica
-          </div>
+        <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight text-balance">
+          Escolha o plano ideal para sua clínica
+        </h2>
 
-          <div className="self-stretch text-center text-[#605A57] text-base font-normal leading-7 font-sans">
-            Escale suas operações radiológicas com preços flexíveis que crescem com sua equipe.
-            <br />
-            Comece grátis, faça upgrade quando estiver pronto.
-          </div>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed text-pretty">
+          Escale suas operações radiológicas com preços flexíveis que crescem com sua equipe.
+          <br />
+          <span className="text-blue-600 font-medium">Comece grátis, faça upgrade quando estiver pronto.</span>
+        </p>
+      </div>
+
+      <div className="flex justify-center mb-16">
+        <div className="bg-white p-1.5 rounded-xl shadow-lg border border-gray-200/50">
+          <button
+            onClick={() => setBillingPeriod("annually")}
+            className={`px-8 py-3 rounded-lg text-sm font-semibold transition-all duration-200 ${
+              billingPeriod === "annually"
+                ? "bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-md transform scale-105"
+                : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+            }`}
+          >
+            Anual
+            {billingPeriod === "annually" && (
+              <span className="ml-2 px-2 py-0.5 bg-white/20 rounded-full text-xs">20% OFF</span>
+            )}
+          </button>
+          <button
+            onClick={() => setBillingPeriod("monthly")}
+            className={`px-8 py-3 rounded-lg text-sm font-semibold transition-all duration-200 ${
+              billingPeriod === "monthly"
+                ? "bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-md transform scale-105"
+                : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+            }`}
+          >
+            Mensal
+          </button>
         </div>
       </div>
 
-      {/* Billing Toggle Section */}
-      <div className="self-stretch px-6 md:px-16 py-9 relative flex justify-center items-center gap-4">
-        {/* Horizontal line */}
-        <div className="w-full max-w-[1060px] h-0 absolute left-1/2 transform -translate-x-1/2 top-[63px] border-t border-[rgba(55,50,47,0.12)] z-0"></div>
-
-        {/* Toggle Container */}
-        <div className="p-3 relative bg-[rgba(55,50,47,0.03)] border border-[rgba(55,50,47,0.02)] backdrop-blur-[44px] backdrop-saturate-150 backdrop-brightness-110 flex justify-center items-center rounded-lg z-20 before:absolute before:inset-0 before:bg-white before:opacity-60 before:rounded-lg before:-z-10">
-          <div className="p-[2px] bg-[rgba(55,50,47,0.10)] shadow-[0px_1px_0px_white] rounded-[99px] border-[0.5px] border-[rgba(55,50,47,0.08)] flex justify-center items-center gap-[2px] relative">
-            <div
-              className={`absolute top-[2px] w-[calc(50%-1px)] h-[calc(100%-4px)] bg-white shadow-[0px_2px_4px_rgba(0,0,0,0.08)] rounded-[99px] transition-all duration-300 ease-in-out ${
-                billingPeriod === "annually" ? "left-[2px]" : "right-[2px]"
-              }`}
-            />
-
-            <button
-              onClick={() => setBillingPeriod("annually")}
-              className="px-4 py-1 rounded-[99px] flex justify-center items-center gap-2 transition-colors duration-300 relative z-10 flex-1"
-            >
-              <div
-                className={`text-[13px] font-medium leading-5 font-sans transition-colors duration-300 ${
-                  billingPeriod === "annually" ? "text-[#37322F]" : "text-[#6B7280]"
-                }`}
-              >
-                Anual
-              </div>
-            </button>
-
-            <button
-              onClick={() => setBillingPeriod("monthly")}
-              className="px-4 py-1 rounded-[99px] flex justify-center items-center gap-2 transition-colors duration-300 relative z-10 flex-1"
-            >
-              <div
-                className={`text-[13px] font-medium leading-5 font-sans transition-colors duration-300 ${
-                  billingPeriod === "monthly" ? "text-[#37322F]" : "text-[#6B7280]"
-                }`}
-              >
-                Mensal
-              </div>
-            </button>
-          </div>
-
-          {/* Decorative dots */}
-          <div className="w-[3px] h-[3px] absolute left-[5px] top-[5.25px] bg-[rgba(55,50,47,0.10)] shadow-[0px_0px_0.5px_rgba(0,0,0,0.12)] rounded-[99px]"></div>
-          <div className="w-[3px] h-[3px] absolute right-[5px] top-[5.25px] bg-[rgba(55,50,47,0.10)] shadow-[0px_0px_0.5px_rgba(0,0,0,0.12)] rounded-[99px]"></div>
-          <div className="w-[3px] h-[3px] absolute left-[5px] bottom-[5.25px] bg-[rgba(55,50,47,0.10)] shadow-[0px_0px_0.5px_rgba(0,0,0,0.12)] rounded-[99px]"></div>
-          <div className="w-[3px] h-[3px] absolute right-[5px] bottom-[5.25px] bg-[rgba(55,50,47,0.10)] shadow-[0px_0px_0.5px_rgba(0,0,0,0.12)] rounded-[99px]"></div>
-        </div>
-      </div>
-
-      {/* Pricing Cards Section */}
-      <div className="self-stretch border-b border-t border-[rgba(55,50,47,0.12)] flex justify-center items-center">
-        <div className="flex justify-center items-start w-full">
-          {/* Left Decorative Pattern */}
-          <div className="w-12 self-stretch relative overflow-hidden hidden md:block">
-            <div className="w-[162px] left-[-58px] top-[-120px] absolute flex flex-col justify-start items-start">
-              {Array.from({ length: 200 }).map((_, i) => (
-                <div
-                  key={i}
-                  className="self-stretch h-4 rotate-[-45deg] origin-top-left outline outline-[0.5px] outline-[rgba(3,7,18,0.08)] outline-offset-[-0.25px]"
-                ></div>
-              ))}
-            </div>
-          </div>
-
-          {/* Pricing Cards Container */}
-          <div className="flex-1 flex flex-col md:flex-row justify-center items-center gap-6 py-12 md:py-0">
-            {/* Starter Plan */}
-            <div className="flex-1 max-w-full md:max-w-none self-stretch px-6 py-5 border border-[rgba(50,45,43,0.12)] border-[#E0DEDB] overflow-hidden flex flex-col justify-start items-start gap-12 bg-[rgba(255,255,255,0)]">
-              {/* Plan Header */}
-              <div className="self-stretch flex flex-col justify-start items-center gap-9">
-                <div className="self-stretch flex flex-col justify-start items-start gap-2">
-                  <div className="text-[rgba(55,50,47,0.90)] text-lg font-medium leading-7 font-sans">Básico</div>
-                  <div className="w-full max-w-[242px] text-[rgba(41,37,35,0.70)] text-sm font-normal leading-5 font-sans">
-                    Perfeito para clínicas pequenas e radiologistas iniciantes.
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-8">
+          {/* Starter Plan */}
+          <div className="bg-white border border-gray-200/50 rounded-3xl p-8 relative hover:shadow-xl hover:shadow-gray-100/50 transition-all duration-300 hover:-translate-y-1 group">
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-50/30 to-transparent rounded-3xl"></div>
+            <div className="relative">
+              <div className="mb-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl flex items-center justify-center">
+                    <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M13 10V3L4 14h7v7l9-11h-7z"
+                      />
+                    </svg>
                   </div>
+                  <h3 className="text-2xl font-bold text-gray-900">Básico</h3>
+                </div>
+                <p className="text-gray-600 mb-8 leading-relaxed">
+                  Perfeito para clínicas pequenas e radiologistas iniciantes.
+                </p>
+
+                <div className="mb-8">
+                  <div className="text-5xl font-bold text-gray-900 mb-2">Grátis</div>
+                  <div className="text-sm text-gray-500 font-medium">para sempre</div>
                 </div>
 
-                <div className="self-stretch flex flex-col justify-start items-start gap-2">
-                  <div className="flex flex-col justify-start items-start gap-1">
-                    <div className="relative h-[60px] flex items-center text-[#37322F] text-5xl font-medium leading-[60px] font-serif">
-                      Grátis
-                    </div>
-                    <div className="text-[#847971] text-sm font-medium font-sans">para sempre</div>
-                  </div>
-                </div>
-
-                <div className="self-stretch px-4 py-[10px] relative bg-[#37322F] shadow-[0px_2px_4px_rgba(55,50,47,0.12)] overflow-hidden rounded-[99px] flex justify-center items-center">
-                  <div className="w-full h-[41px] absolute left-0 top-[-0.5px] bg-gradient-to-b from-[rgba(255,255,255,0.20)] to-[rgba(0,0,0,0.10)] mix-blend-multiply"></div>
-                  <div className="max-w-[108px] flex justify-center flex-col text-[#FBFAF9] text-[13px] font-medium leading-5 font-sans">
-                    Começar grátis
-                  </div>
-                </div>
+                <button className="w-full bg-gray-900 text-white py-4 px-6 rounded-xl font-semibold hover:bg-gray-800 transition-all duration-200 hover:shadow-lg group-hover:scale-105">
+                  Começar grátis
+                </button>
               </div>
 
-              {/* Professional Plan (Featured) */}
-              <div className="flex-1 max-w-full md:max-w-none self-stretch px-6 py-5 bg-[#37322F] border border-[rgba(50,45,43,0.12)] border-[rgba(55,50,47,0.12)] overflow-hidden flex flex-col justify-start items-start gap-12">
-                {/* Plan Header */}
-                <div className="self-stretch flex flex-col justify-start items-center gap-9">
-                  <div className="self-stretch flex flex-col justify-start items-start gap-2">
-                    <div className="text-[#FBFAF9] text-lg font-medium leading-7 font-sans">Profissional</div>
-                    <div className="w-full max-w-[242px] text-[#B2AEA9] text-sm font-normal leading-5 font-sans">
-                      Recursos avançados para clínicas em crescimento e hospitais.
+              <div className="space-y-4">
+                {[
+                  "Até 100 laudos/mês",
+                  "Modelos básicos de laudos",
+                  "Suporte por email",
+                  "Integração DICOM básica",
+                  "Relatórios simples",
+                ].map((feature, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <div className="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <svg className="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
                     </div>
+                    <span className="text-gray-700 font-medium">{feature}</span>
                   </div>
-
-                  <div className="self-stretch flex flex-col justify-start items-start gap-2">
-                    <div className="flex flex-col justify-start items-start gap-1">
-                      <div className="relative h-[60px] flex items-center text-[#F0EFEE] text-3xl font-medium leading-[60px] font-serif">
-                        Sob consulta
-                      </div>
-                      <div className="text-[#D2C6BF] text-sm font-medium font-sans">preços personalizados</div>
-                    </div>
-                  </div>
-
-                  {/* CTA Button */}
-                  <div className="self-stretch px-4 py-[10px] relative bg-[#FBFAF9] shadow-[0px_2px_4px_rgba(55,50,47,0.12)] overflow-hidden rounded-[99px] flex justify-center items-center">
-                    <div className="w-full h-[41px] absolute left-0 top-[-0.5px] bg-gradient-to-b from-[rgba(255,255,255,0)] to-[rgba(0,0,0,0.10)] mix-blend-multiply"></div>
-                    <div className="max-w-[108px] flex justify-center flex-col text-[#37322F] text-[13px] font-medium leading-5 font-sans">
-                      Falar com vendas
-                    </div>
-                  </div>
-                </div>
-
-                <div className="self-stretch flex flex-col justify-start items-start gap-2">
-                  {[
-                    "Até 100 laudos/mês",
-                    "Modelos básicos de laudos",
-                    "Suporte por email",
-                    "Integração DICOM básica",
-                    "Relatórios simples",
-                  ].map((feature, index) => (
-                    <div key={index} className="self-stretch flex justify-start items-center gap-[13px]">
-                      <div className="w-4 h-4 relative flex items-center justify-center">
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M10 3L4.5 8.5L2 6"
-                            stroke="#9CA3AF"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </div>
-                      <div className="flex-1 text-[rgba(55,50,47,0.80)] text-[12.5px] font-normal leading-5 font-sans">
-                        {feature}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Enterprise Plan */}
-              <div className="flex-1 max-w-full md:max-w-none self-stretch px-6 py-5 bg-white border border-[#E0DEDB] overflow-hidden flex flex-col justify-start items-start gap-12">
-                {/* Plan Header */}
-                <div className="self-stretch flex flex-col justify-start items-center gap-9">
-                  <div className="self-stretch flex flex-col justify-start items-start gap-2">
-                    <div className="text-[rgba(55,50,47,0.90)] text-lg font-medium leading-7 font-sans">Hospitalar</div>
-                    <div className="w-full max-w-[242px] text-[rgba(41,37,35,0.70)] text-sm font-normal leading-5 font-sans">
-                      Solução completa para grandes hospitais e redes de saúde.
-                    </div>
-                  </div>
-
-                  <div className="self-stretch flex flex-col justify-start items-start gap-2">
-                    <div className="flex flex-col justify-start items-start gap-1">
-                      <div className="relative h-[60px] flex items-center text-[#37322F] text-5xl font-medium leading-[60px] font-serif">
-                        <span className="invisible">R${pricing.enterprise[billingPeriod]}</span>
-                        <span
-                          className="absolute inset-0 flex items-center transition-all duration-500"
-                          style={{
-                            opacity: billingPeriod === "annually" ? 1 : 0,
-                            transform: `scale(${billingPeriod === "annually" ? 1 : 0.8})`,
-                            filter: `blur(${billingPeriod === "annually" ? 0 : 4}px)`,
-                          }}
-                          aria-hidden={billingPeriod !== "annually"}
-                        >
-                          R${pricing.enterprise.annually}
-                        </span>
-                        <span
-                          className="absolute inset-0 flex items-center transition-all duration-500"
-                          style={{
-                            opacity: billingPeriod === "monthly" ? 1 : 0,
-                            transform: `scale(${billingPeriod === "monthly" ? 1 : 0.8})`,
-                            filter: `blur(${billingPeriod === "monthly" ? 0 : 4}px)`,
-                          }}
-                          aria-hidden={billingPeriod !== "monthly"}
-                        >
-                          R${pricing.enterprise.monthly}
-                        </span>
-                      </div>
-                      <div className="text-[#847971] text-sm font-medium font-sans">
-                        por {billingPeriod === "monthly" ? "mês" : "ano"}, por usuário.
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="self-stretch px-4 py-[10px] relative bg-[#37322F] shadow-[0px_2px_4px_rgba(55,50,47,0.12)] overflow-hidden rounded-[99px] flex justify-center items-center">
-                    <div className="w-full h-[41px] absolute left-0 top-[-0.5px] bg-gradient-to-b from-[rgba(255,255,255,0.20)] to-[rgba(0,0,0,0.10)] mix-blend-multiply"></div>
-                    <div className="max-w-[108px] flex justify-center flex-col text-[#FBFAF9] text-[13px] font-medium leading-5 font-sans">
-                      Falar com vendas
-                    </div>
-                  </div>
-                </div>
-
-                <div className="self-stretch flex flex-col justify-start items-start gap-2">
-                  {[
-                    "Tudo do Profissional",
-                    "Gerente de conta dedicado",
-                    "Suporte telefônico 24/7",
-                    "Onboarding personalizado",
-                    "Recursos de segurança avançados",
-                    "Integração SSO",
-                    "Contratos personalizados",
-                    "White-label disponível",
-                  ].map((feature, index) => (
-                    <div key={index} className="self-stretch flex justify-start items-center gap-[13px]">
-                      <div className="w-4 h-4 relative flex items-center justify-center">
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M10 3L4.5 8.5L2 6"
-                            stroke="#9CA3AF"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </div>
-                      <div className="flex-1 text-[rgba(55,50,47,0.80)] text-[12.5px] font-normal leading-5 font-sans">
-                        {feature}
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                ))}
               </div>
             </div>
           </div>
 
-          {/* Right Decorative Pattern */}
-          <div className="w-12 self-stretch relative overflow-hidden hidden md:block">
-            <div className="w-[162px] left-[-58px] top-[-120px] absolute flex flex-col justify-start items-start">
-              {Array.from({ length: 200 }).map((_, i) => (
-                <div
-                  key={i}
-                  className="self-stretch h-4 rotate-[-45deg] origin-top-left outline outline-[0.5px] outline-[rgba(3,7,18,0.08)] outline-offset-[-0.25px]"
-                ></div>
-              ))}
+          {/* Professional Plan - Featured */}
+          <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white border border-gray-700/50 rounded-3xl p-8 relative scale-105 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 group">
+            <div className="absolute -top-5 left-1/2 transform -translate-x-1/2">
+              <div className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                ⭐ Mais Popular
+              </div>
+            </div>
+
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 rounded-3xl"></div>
+
+            <div className="relative">
+              <div className="mb-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold">Profissional</h3>
+                </div>
+                <p className="text-gray-300 mb-8 leading-relaxed">
+                  Recursos avançados para clínicas em crescimento e hospitais.
+                </p>
+
+                <div className="mb-8">
+                  <div className="text-4xl font-bold mb-2">Sob consulta</div>
+                  <div className="text-sm text-gray-400 font-medium">preços personalizados</div>
+                </div>
+
+                <button className="w-full bg-white text-gray-900 py-4 px-6 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-200 hover:shadow-lg group-hover:scale-105">
+                  Falar com vendas
+                </button>
+              </div>
+
+              <div className="space-y-4">
+                {[
+                  "Laudos ilimitados",
+                  "Modelos avançados de IA",
+                  "Suporte prioritário",
+                  "Integração PACS/RIS completa",
+                  "Analytics avançados",
+                  "API personalizada",
+                  "Treinamento da equipe",
+                ].map((feature, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <div className="w-5 h-5 bg-green-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                      <svg className="w-3 h-3 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <span className="text-gray-200 font-medium">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Enterprise Plan */}
+          <div className="bg-white border border-gray-200/50 rounded-3xl p-8 relative hover:shadow-xl hover:shadow-gray-100/50 transition-all duration-300 hover:-translate-y-1 group">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-indigo-50/30 rounded-3xl"></div>
+            <div className="relative">
+              <div className="mb-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900">Hospitalar</h3>
+                </div>
+                <p className="text-gray-600 mb-8 leading-relaxed">
+                  Solução completa para grandes hospitais e redes de saúde.
+                </p>
+
+                <div className="mb-8">
+                  <div className="text-5xl font-bold text-gray-900 mb-2">R${pricing.enterprise[billingPeriod]}</div>
+                  <div className="text-sm text-gray-500 font-medium">
+                    por {billingPeriod === "monthly" ? "mês" : "ano"}, por usuário
+                  </div>
+                  {billingPeriod === "annually" && (
+                    <div className="text-xs text-green-600 font-semibold mt-1">💰 Economize R$180/ano por usuário</div>
+                  )}
+                </div>
+
+                <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white py-4 px-6 rounded-xl font-semibold hover:from-blue-600 hover:to-indigo-600 transition-all duration-200 hover:shadow-lg group-hover:scale-105">
+                  Falar com vendas
+                </button>
+              </div>
+
+              <div className="space-y-4">
+                {[
+                  "Tudo do Profissional",
+                  "Gerente de conta dedicado",
+                  "Suporte telefônico 24/7",
+                  "Onboarding personalizado",
+                  "Recursos de segurança avançados",
+                  "Integração SSO",
+                  "Contratos personalizados",
+                  "White-label disponível",
+                ].map((feature, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <svg className="w-3 h-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <span className="text-gray-700 font-medium">{feature}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
