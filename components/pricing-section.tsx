@@ -11,12 +11,12 @@ export default function PricingSection() {
       annually: 0,
     },
     professional: {
-      monthly: 20,
-      annually: 16, // 20% discount for annual
+      monthly: 299,
+      annually: 239, // 20% discount for annual
     },
     enterprise: {
-      monthly: 200,
-      annually: 160, // 20% discount for annual
+      monthly: 899,
+      annually: 719, // 20% discount for annual
     },
   }
 
@@ -39,20 +39,18 @@ export default function PricingSection() {
               </svg>
             </div>
             <div className="text-center flex justify-center flex-col text-[#37322F] text-xs font-medium leading-3 font-sans">
-              Plans & Pricing
+              Planos & Preços
             </div>
           </div>
 
-          {/* Title */}
           <div className="self-stretch text-center flex justify-center flex-col text-[#49423D] text-3xl md:text-5xl font-semibold leading-tight md:leading-[60px] font-sans tracking-tight">
-            Choose the perfect plan for your business
+            Escolha o plano ideal para sua clínica
           </div>
 
-          {/* Description */}
           <div className="self-stretch text-center text-[#605A57] text-base font-normal leading-7 font-sans">
-            Scale your operations with flexible pricing that grows with your team.
+            Escale suas operações radiológicas com preços flexíveis que crescem com sua equipe.
             <br />
-            Start free, upgrade when you're ready.
+            Comece grátis, faça upgrade quando estiver pronto.
           </div>
         </div>
       </div>
@@ -80,7 +78,7 @@ export default function PricingSection() {
                   billingPeriod === "annually" ? "text-[#37322F]" : "text-[#6B7280]"
                 }`}
               >
-                Annually
+                Anual
               </div>
             </button>
 
@@ -93,7 +91,7 @@ export default function PricingSection() {
                   billingPeriod === "monthly" ? "text-[#37322F]" : "text-[#6B7280]"
                 }`}
               >
-                Monthly
+                Mensal
               </div>
             </button>
           </div>
@@ -128,16 +126,16 @@ export default function PricingSection() {
               {/* Plan Header */}
               <div className="self-stretch flex flex-col justify-start items-center gap-9">
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
-                  <div className="text-[rgba(55,50,47,0.90)] text-lg font-medium leading-7 font-sans">Starter</div>
+                  <div className="text-[rgba(55,50,47,0.90)] text-lg font-medium leading-7 font-sans">Básico</div>
                   <div className="w-full max-w-[242px] text-[rgba(41,37,35,0.70)] text-sm font-normal leading-5 font-sans">
-                    Perfect for individuals and small teams getting started.
+                    Perfeito para clínicas pequenas e radiologistas iniciantes.
                   </div>
                 </div>
 
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
                   <div className="flex flex-col justify-start items-start gap-1">
                     <div className="relative h-[60px] flex items-center text-[#37322F] text-5xl font-medium leading-[60px] font-serif">
-                      <span className="invisible">${pricing.starter[billingPeriod]}</span>
+                      <span className="invisible">R${pricing.starter[billingPeriod]}</span>
                       <span
                         className="absolute inset-0 flex items-center transition-all duration-500"
                         style={{
@@ -147,7 +145,7 @@ export default function PricingSection() {
                         }}
                         aria-hidden={billingPeriod !== "annually"}
                       >
-                        ${pricing.starter.annually}
+                        R${pricing.starter.annually}
                       </span>
                       <span
                         className="absolute inset-0 flex items-center transition-all duration-500"
@@ -158,11 +156,11 @@ export default function PricingSection() {
                         }}
                         aria-hidden={billingPeriod !== "monthly"}
                       >
-                        ${pricing.starter.monthly}
+                        R${pricing.starter.monthly}
                       </span>
                     </div>
                     <div className="text-[#847971] text-sm font-medium font-sans">
-                      per {billingPeriod === "monthly" ? "month" : "year"}, per user.
+                      por {billingPeriod === "monthly" ? "mês" : "ano"}, por usuário.
                     </div>
                   </div>
                 </div>
@@ -170,18 +168,18 @@ export default function PricingSection() {
                 <div className="self-stretch px-4 py-[10px] relative bg-[#37322F] shadow-[0px_2px_4px_rgba(55,50,47,0.12)] overflow-hidden rounded-[99px] flex justify-center items-center">
                   <div className="w-full h-[41px] absolute left-0 top-[-0.5px] bg-gradient-to-b from-[rgba(255,255,255,0.20)] to-[rgba(0,0,0,0.10)] mix-blend-multiply"></div>
                   <div className="max-w-[108px] flex justify-center flex-col text-[#FBFAF9] text-[13px] font-medium leading-5 font-sans">
-                    Start for free
+                    Começar grátis
                   </div>
                 </div>
               </div>
 
               <div className="self-stretch flex flex-col justify-start items-start gap-2">
                 {[
-                  "Up to 3 projects",
-                  "Basic documentation tools",
-                  "Community support",
-                  "Standard templates",
-                  "Basic analytics",
+                  "Até 100 laudos/mês",
+                  "Modelos básicos de laudos",
+                  "Suporte por email",
+                  "Integração DICOM básica",
+                  "Relatórios simples",
                 ].map((feature, index) => (
                   <div key={index} className="self-stretch flex justify-start items-center gap-[13px]">
                     <div className="w-4 h-4 relative flex items-center justify-center">
@@ -208,16 +206,16 @@ export default function PricingSection() {
               {/* Plan Header */}
               <div className="self-stretch flex flex-col justify-start items-center gap-9">
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
-                  <div className="text-[#FBFAF9] text-lg font-medium leading-7 font-sans">Professional</div>
+                  <div className="text-[#FBFAF9] text-lg font-medium leading-7 font-sans">Profissional</div>
                   <div className="w-full max-w-[242px] text-[#B2AEA9] text-sm font-normal leading-5 font-sans">
-                    Advanced features for growing teams and businesses.
+                    Recursos avançados para clínicas em crescimento e hospitais.
                   </div>
                 </div>
 
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
                   <div className="flex flex-col justify-start items-start gap-1">
                     <div className="relative h-[60px] flex items-center text-[#F0EFEE] text-5xl font-medium leading-[60px] font-serif">
-                      <span className="invisible">${pricing.professional[billingPeriod]}</span>
+                      <span className="invisible">R${pricing.professional[billingPeriod]}</span>
                       <span
                         className="absolute inset-0 flex items-center transition-all duration-500"
                         style={{
@@ -227,7 +225,7 @@ export default function PricingSection() {
                         }}
                         aria-hidden={billingPeriod !== "annually"}
                       >
-                        ${pricing.professional.annually}
+                        R${pricing.professional.annually}
                       </span>
                       <span
                         className="absolute inset-0 flex items-center transition-all duration-500"
@@ -238,11 +236,11 @@ export default function PricingSection() {
                         }}
                         aria-hidden={billingPeriod !== "monthly"}
                       >
-                        ${pricing.professional.monthly}
+                        R${pricing.professional.monthly}
                       </span>
                     </div>
                     <div className="text-[#D2C6BF] text-sm font-medium font-sans">
-                      per {billingPeriod === "monthly" ? "month" : "year"}, per user.
+                      por {billingPeriod === "monthly" ? "mês" : "ano"}, por usuário.
                     </div>
                   </div>
                 </div>
@@ -251,21 +249,21 @@ export default function PricingSection() {
                 <div className="self-stretch px-4 py-[10px] relative bg-[#FBFAF9] shadow-[0px_2px_4px_rgba(55,50,47,0.12)] overflow-hidden rounded-[99px] flex justify-center items-center">
                   <div className="w-full h-[41px] absolute left-0 top-[-0.5px] bg-gradient-to-b from-[rgba(255,255,255,0)] to-[rgba(0,0,0,0.10)] mix-blend-multiply"></div>
                   <div className="max-w-[108px] flex justify-center flex-col text-[#37322F] text-[13px] font-medium leading-5 font-sans">
-                    Get started
+                    Começar agora
                   </div>
                 </div>
               </div>
 
               <div className="self-stretch flex flex-col justify-start items-start gap-2">
                 {[
-                  "Unlimited projects",
-                  "Advanced documentation tools",
-                  "Priority support",
-                  "Custom templates",
-                  "Advanced analytics",
-                  "Team collaboration",
-                  "API access",
-                  "Custom integrations",
+                  "Laudos ilimitados",
+                  "IA avançada para diagnósticos",
+                  "Suporte prioritário 24/7",
+                  "Modelos personalizados",
+                  "Analytics avançados",
+                  "Integração com convênios",
+                  "API completa",
+                  "Integração PACS/RIS",
                 ].map((feature, index) => (
                   <div key={index} className="self-stretch flex justify-start items-center gap-[13px]">
                     <div className="w-4 h-4 relative flex items-center justify-center">
@@ -290,16 +288,16 @@ export default function PricingSection() {
               {/* Plan Header */}
               <div className="self-stretch flex flex-col justify-start items-center gap-9">
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
-                  <div className="text-[rgba(55,50,47,0.90)] text-lg font-medium leading-7 font-sans">Enterprise</div>
+                  <div className="text-[rgba(55,50,47,0.90)] text-lg font-medium leading-7 font-sans">Hospitalar</div>
                   <div className="w-full max-w-[242px] text-[rgba(41,37,35,0.70)] text-sm font-normal leading-5 font-sans">
-                    Complete solution for large organizations and enterprises.
+                    Solução completa para grandes hospitais e redes de saúde.
                   </div>
                 </div>
 
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
                   <div className="flex flex-col justify-start items-start gap-1">
                     <div className="relative h-[60px] flex items-center text-[#37322F] text-5xl font-medium leading-[60px] font-serif">
-                      <span className="invisible">${pricing.enterprise[billingPeriod]}</span>
+                      <span className="invisible">R${pricing.enterprise[billingPeriod]}</span>
                       <span
                         className="absolute inset-0 flex items-center transition-all duration-500"
                         style={{
@@ -309,7 +307,7 @@ export default function PricingSection() {
                         }}
                         aria-hidden={billingPeriod !== "annually"}
                       >
-                        ${pricing.enterprise.annually}
+                        R${pricing.enterprise.annually}
                       </span>
                       <span
                         className="absolute inset-0 flex items-center transition-all duration-500"
@@ -320,11 +318,11 @@ export default function PricingSection() {
                         }}
                         aria-hidden={billingPeriod !== "monthly"}
                       >
-                        ${pricing.enterprise.monthly}
+                        R${pricing.enterprise.monthly}
                       </span>
                     </div>
                     <div className="text-[#847971] text-sm font-medium font-sans">
-                      per {billingPeriod === "monthly" ? "month" : "year"}, per user.
+                      por {billingPeriod === "monthly" ? "mês" : "ano"}, por usuário.
                     </div>
                   </div>
                 </div>
@@ -332,21 +330,21 @@ export default function PricingSection() {
                 <div className="self-stretch px-4 py-[10px] relative bg-[#37322F] shadow-[0px_2px_4px_rgba(55,50,47,0.12)] overflow-hidden rounded-[99px] flex justify-center items-center">
                   <div className="w-full h-[41px] absolute left-0 top-[-0.5px] bg-gradient-to-b from-[rgba(255,255,255,0.20)] to-[rgba(0,0,0,0.10)] mix-blend-multiply"></div>
                   <div className="max-w-[108px] flex justify-center flex-col text-[#FBFAF9] text-[13px] font-medium leading-5 font-sans">
-                    Contact sales
+                    Falar com vendas
                   </div>
                 </div>
               </div>
 
               <div className="self-stretch flex flex-col justify-start items-start gap-2">
                 {[
-                  "Everything in Professional",
-                  "Dedicated account manager",
-                  "24/7 phone support",
-                  "Custom onboarding",
-                  "Advanced security features",
-                  "SSO integration",
-                  "Custom contracts",
-                  "White-label options",
+                  "Tudo do Profissional",
+                  "Gerente de conta dedicado",
+                  "Suporte telefônico 24/7",
+                  "Onboarding personalizado",
+                  "Recursos de segurança avançados",
+                  "Integração SSO",
+                  "Contratos personalizados",
+                  "White-label disponível",
                 ].map((feature, index) => (
                   <div key={index} className="self-stretch flex justify-start items-center gap-[13px]">
                     <div className="w-4 h-4 relative flex items-center justify-center">
