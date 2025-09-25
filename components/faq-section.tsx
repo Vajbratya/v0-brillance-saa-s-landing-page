@@ -9,34 +9,34 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
   {
-    question: "O que é a laudos.ai e para quem é destinada?",
+    question: "O que é a API de Laudos IA e para quem é destinada?",
     answer:
-      "A laudos.ai é uma plataforma abrangente de automação de laudos projetada para empresas que precisam de geração de relatórios personalizados. É perfeita para empresas SaaS, prestadores de serviços e corporações que buscam otimizar seus processos de geração de laudos.",
+      "Nossa API de Laudos IA é uma solução robusta para hospitais, clínicas e sistemas de saúde que precisam automatizar a geração de laudos radiológicos. Perfeita para instituições que buscam integrar inteligência artificial em seus fluxos de trabalho médicos.",
   },
   {
-    question: "Como funciona a geração de laudos personalizados?",
+    question: "Como funciona a geração automática de laudos radiológicos?",
     answer:
-      "Nossa plataforma processa automaticamente seus dados, calcula informações baseadas em seus termos específicos e gera laudos. Você pode configurar estruturas complexas de análise, relatórios baseados em uso e ciclos personalizados de geração.",
+      "Nossa API processa automaticamente imagens médicas, analisa achados radiológicos e gera laudos estruturados. Você pode configurar modelos específicos por especialidade, personalizar templates e integrar com sistemas PACS existentes.",
   },
   {
-    question: "Posso integrar a laudos.ai com minhas ferramentas existentes?",
+    question: "Posso integrar a API com meus sistemas hospitalares existentes?",
     answer:
-      "Sim! A laudos.ai se integra perfeitamente com sistemas CRM populares, software de contabilidade e processadores de dados. Suportamos APIs e webhooks para integrações personalizadas com seu fluxo de trabalho existente.",
+      "Sim! Nossa API se integra perfeitamente com sistemas PACS, RIS, HIS e outros softwares hospitalares. Suportamos protocolos DICOM, HL7 e APIs REST para integrações personalizadas com seu fluxo de trabalho existente.",
   },
   {
-    question: "Que tipo de suporte vocês fornecem?",
+    question: "Que tipo de suporte técnico vocês fornecem?",
     answer:
-      "Oferecemos suporte ao cliente 24/7, gerentes de conta dedicados para clientes empresariais, documentação abrangente e assistência de integração para ajudá-lo a começar rapidamente.",
+      "Oferecemos suporte técnico 24/7, gerentes de conta dedicados para clientes hospitalares, documentação completa da API e assistência de integração para implementação rápida em ambiente hospitalar.",
   },
   {
-    question: "Meus dados estão seguros com a laudos.ai?",
+    question: "Os dados médicos estão seguros com nossa API?",
     answer:
-      "Absolutamente. Usamos medidas de segurança de nível empresarial, incluindo criptografia ponta a ponta, conformidade SOC 2 e auditorias de segurança regulares. Seus dados são armazenados em data centers seguros e redundantes.",
+      "Absolutamente. Utilizamos criptografia de nível hospitalar, conformidade HIPAA e LGPD, auditorias de segurança regulares e armazenamento em data centers certificados. Todos os dados são processados com máxima segurança e privacidade.",
   },
   {
-    question: "Como começar com a laudos.ai?",
+    question: "Como começar a usar a API de Laudos IA?",
     answer:
-      "Começar é simples! Inscreva-se para nosso teste gratuito, conecte seus sistemas existentes, e nossa equipe de integração ajudará você a configurar seu primeiro fluxo de trabalho de laudos personalizados em 24 horas.",
+      "É simples! Entre em contato com nossa equipe comercial, configure seu ambiente de teste, e nossa equipe técnica ajudará você a implementar a primeira integração em seu sistema hospitalar em 48 horas.",
   },
 ]
 
@@ -71,9 +71,9 @@ export default function FAQSection() {
             Perguntas Frequentes
           </div>
           <div className="w-full text-[#605A57] text-base font-normal leading-7 font-sans">
-            Explore seus dados, construa seu dashboard,
+            Integre nossa API, automatize laudos,
             <br className="hidden md:block" />
-            una sua equipe.
+            transforme seu fluxo de trabalho médico.
           </div>
         </div>
 

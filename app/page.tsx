@@ -198,8 +198,8 @@ export default function LandingPage() {
                           }`}
                         >
                           <img
-                            src="/central-achados-criticos.png"
-                            alt="Central de Achados Críticos - Monitoramento de Laudos"
+                            src="/biblioteca-modelos.png"
+                            alt="Biblioteca de Modelos - Coleção de Modelos Profissionais para Laudos"
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -271,8 +271,8 @@ export default function LandingPage() {
                     onClick={() => handleCardClick(0)}
                   />
                   <FeatureCard
-                    title="Achados Críticos em Tempo Real"
-                    description="Monitoramento contínuo identifica 110 achados de alta prioridade. Sistema SHIELD detecta automaticamente lesões críticas para ação imediata."
+                    title="Biblioteca de Modelos Profissionais"
+                    description="Coleção completa de modelos pré-configurados para acelerar laudos. Modelos públicos e privados com descrições técnicas detalhadas para diferentes tipos de exames."
                     isActive={activeCard === 1}
                     progress={activeCard === 1 ? progress : 0}
                     onClick={() => handleCardClick(1)}

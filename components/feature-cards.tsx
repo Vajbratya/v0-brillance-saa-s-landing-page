@@ -7,9 +7,9 @@ export function FeatureCards() {
       highlighted: true,
     },
     {
-      title: "API Simples e Poderosa",
+      title: "API Enterprise Grade",
       description:
-        "Integre facilmente nossa API em seus sistemas existentes com documentação completa e suporte técnico.",
+        "Infraestrutura robusta com SLA 99.9%, suporte 24/7 e compliance total. Processe milhares de laudos com segurança e escalabilidade empresarial.",
       highlighted: false,
     },
     {

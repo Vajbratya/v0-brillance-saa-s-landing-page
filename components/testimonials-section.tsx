@@ -22,25 +22,25 @@ export default function TestimonialsSection() {
   const testimonials = [
     {
       quote:
-        "Em poucos minutos, transformamos nossos dados em laudos acionáveis. O processo foi perfeito e incrivelmente eficiente!",
-      name: "Jamie Marshall",
-      company: "Co-fundador, Exponent",
+        "Em poucos dias, integramos a API e transformamos nosso processo de laudos. A automação é impressionante e a precisão diagnóstica melhorou significativamente!",
+      name: "Dr. Carlos Mendes",
+      company: "Diretor Médico, Hospital São Lucas",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Sep%2011%2C%202025%2C%2011_35_19%20AM-z4zSRLsbOQDp7MJS1t8EXmGNB6Al9Z.png",
     },
     {
       quote:
-        "A laudos.ai revolucionou como lidamos com relatórios personalizados. A automação nos economiza horas toda semana e elimina erros completamente.",
-      name: "Sarah Chen",
-      company: "VP Operações, TechFlow",
+        "A API de Laudos IA revolucionou nosso departamento de radiologia. O que antes levava horas agora é processado em minutos, com qualidade excepcional.",
+      name: "Dra. Ana Silva",
+      company: "Chefe de Radiologia, Clínica Diagnóstica Avançada",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Sep%2011%2C%202025%2C%2010_54_18%20AM-nbiecp92QNdTudmCrHr97uekrIPzCP.png",
     },
     {
       quote:
-        "A automação de laudos é revolucionária. O que costumava levar dias para nossa equipe agora acontece automaticamente com precisão perfeita.",
-      name: "Marcus Rodriguez",
-      company: "Diretor Financeiro, InnovateCorp",
+        "A integração foi perfeita e o suporte técnico excepcional. Nossa produtividade aumentou 300% e a satisfação dos médicos melhorou drasticamente.",
+      name: "João Santos",
+      company: "CTO, Rede Hospitalar Vida",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Sep%2011%2C%202025%2C%2011_01_05%20AM-TBOe92trRxKn4G5So1m9D2h7LRH4PG.png",
     },

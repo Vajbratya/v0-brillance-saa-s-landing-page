@@ -21,17 +21,32 @@ export default function DocumentationSection() {
 
   const cards = [
     {
-      title: "Gere laudos radiológicos personalizados",
+      title: "De médico para médico",
       description:
-        "Analise exames de imagem, gere laudos precisos,\nintegre com sistemas hospitalares em uma plataforma.",
+        "Desenvolvido por médicos especialistas com foco na eficiência clínica.\nFunciona perfeitamente na sua instituição hospitalar.",
+      image: "/medico-para-medico.png",
+      alt: "Dois médicos se cumprimentando - Plataforma desenvolvida por médicos para médicos",
     },
     {
-      title: "Dados médicos para insights em minutos",
-      description: "Transforme dados de exames em insights clínicos\ncom ferramentas de análise radiológica avançadas.",
+      title: "Workflows personalizados",
+      description:
+        "Configure regras customizáveis e processos automatizados.\nPerfis configuráveis com validação dupla e algoritmos inteligentes.",
+      image: "/workflows-personalizados.png",
+      alt: "Interface de workflows personalizados com regras customizáveis e processos automatizados",
     },
     {
-      title: "Colabore com equipes médicas",
-      description: "Trabalhe junto com radiologistas em tempo real\ne compartilhe laudos instantaneamente com médicos.",
+      title: "Detecção automática de achados críticos",
+      description:
+        "Sistema inteligente identifica automaticamente achados críticos.\nAlertas visuais destacam massas suspeitas e lesões importantes.",
+      image: "/deteccao-automatica.png",
+      alt: "Sistema de detecção automática destacando achados críticos com alertas visuais",
+    },
+    {
+      title: "Transformação digital de laudos",
+      description:
+        "Converta laudos despadronizados em relatórios digitais estruturados.\nPadronização automática com formulários organizados e consistentes.",
+      image: "/laudo-padronizado.png",
+      alt: "Transformação de laudo despadronizado em laudo digital estruturado",
     },
   ]
 
@@ -61,12 +76,11 @@ export default function DocumentationSection() {
             text="Recursos da Plataforma"
           />
           <div className="self-stretch text-center flex justify-center flex-col text-[#49423D] text-3xl md:text-5xl font-semibold leading-tight md:leading-[60px] font-sans tracking-tight">
-            Otimize suas operações de saúde
+            Potencialize sua infraestrutura médica
           </div>
           <div className="self-stretch text-center text-[#605A57] text-base font-normal leading-7 font-sans">
-            Gerencie laudos radiológicos, analise exames médicos e colabore com equipes
-            <br />
-            tudo em uma plataforma especializada em saúde.
+            Integre nossa API de laudos radiológicos, automatize diagnósticos e acelere
+            <br />o fluxo de trabalho médico em sua instituição de saúde.
           </div>
         </div>
       </div>
@@ -113,15 +127,22 @@ export default function DocumentationSection() {
           {/* Right Column - Image */}
           <div className="w-full md:w-auto rounded-lg flex flex-col justify-center items-center gap-2 order-1 md:order-2 md:px-0 px-[00]">
             <div className="w-full md:w-[580px] h-[250px] md:h-[420px] bg-white shadow-[0px_0px_0px_0.9056603908538818px_rgba(0,0,0,0.08)] overflow-hidden rounded-lg flex flex-col justify-start items-start">
-              <div
-                className={`w-full h-full transition-all duration-300 ${
-                  activeCard === 0
-                    ? "bg-gradient-to-br from-blue-50 to-blue-100"
-                    : activeCard === 1
-                      ? "bg-gradient-to-br from-purple-50 to-purple-100"
-                      : "bg-gradient-to-br from-green-50 to-green-100"
-                }`}
-              />
+              <div className="w-full h-full relative">
+                {cards.map((card, index) => (
+                  <div
+                    key={index}
+                    className={`absolute inset-0 transition-all duration-500 ease-in-out ${
+                      activeCard === index ? "opacity-100 scale-100" : "opacity-0 scale-95"
+                    }`}
+                  >
+                    <img
+                      src={card.image || "/placeholder.svg"}
+                      alt={card.alt}
+                      className="w-full h-full object-contain p-4"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
