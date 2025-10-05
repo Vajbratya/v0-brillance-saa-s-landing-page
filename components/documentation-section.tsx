@@ -73,14 +73,15 @@ export default function DocumentationSection() {
             icon={
               <div className="w-[10.50px] h-[10.50px] outline outline-[1.17px] outline-[#37322F] outline-offset-[-0.58px] rounded-full"></div>
             }
-            text="Recursos da Plataforma"
+            text="Eficiência Operacional"
           />
           <div className="self-stretch text-center flex justify-center flex-col text-[#49423D] text-3xl md:text-5xl font-semibold leading-tight md:leading-[60px] font-sans tracking-tight">
-            Potencialize sua infraestrutura médica
+            Maximize o ROI da sua instituição
           </div>
           <div className="self-stretch text-center text-[#605A57] text-base font-normal leading-7 font-sans">
-            Integre nossa API de laudos radiológicos, automatize diagnósticos e acelere
-            <br />o fluxo de trabalho médico em sua instituição de saúde.
+            Reduza custos operacionais, acelere processos e melhore a qualidade
+            <br />
+            dos serviços médicos com nossa plataforma enterprise.
           </div>
         </div>
       </div>

@@ -9,34 +9,34 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
   {
-    question: "O que é a API de Laudos IA e para quem é destinada?",
+    question: "Qual o ROI esperado ao implementar a API de Laudos IA?",
     answer:
-      "Nossa API de Laudos IA é uma solução robusta para hospitais, clínicas e sistemas de saúde que precisam automatizar a geração de laudos radiológicos. Perfeita para instituições que buscam integrar inteligência artificial em seus fluxos de trabalho médicos.",
+      "Nossos clientes hospitalares reportam redução de 40% nos custos operacionais de radiologia, aumento de 300% na velocidade de diagnósticos e ROI positivo em 90 dias. A automação elimina retrabalho e otimiza a produtividade médica.",
   },
   {
-    question: "Como funciona a geração automática de laudos radiológicos?",
+    question: "Como é o processo de implementação em ambiente hospitalar?",
     answer:
-      "Nossa API processa automaticamente imagens médicas, analisa achados radiológicos e gera laudos estruturados. Você pode configurar modelos específicos por especialidade, personalizar templates e integrar com sistemas PACS existentes.",
+      "Implementação completa em 48 horas com zero downtime. Nossa equipe técnica gerencia toda integração com sistemas PACS, RIS e HIS existentes. Incluímos treinamento da equipe e suporte 24/7 durante a transição.",
   },
   {
-    question: "Posso integrar a API com meus sistemas hospitalares existentes?",
+    question: "A solução atende às regulamentações de saúde brasileiras?",
     answer:
-      "Sim! Nossa API se integra perfeitamente com sistemas PACS, RIS, HIS e outros softwares hospitalares. Suportamos protocolos DICOM, HL7 e APIs REST para integrações personalizadas com seu fluxo de trabalho existente.",
+      "Sim, nossa plataforma é 100% compliance com LGPD, CFM e ANVISA. Certificações ISO 27001, criptografia de nível hospitalar e auditorias regulares garantem máxima segurança para dados médicos sensíveis.",
   },
   {
-    question: "Que tipo de suporte técnico vocês fornecem?",
+    question: "Que tipo de suporte oferecemos para administradores hospitalares?",
     answer:
-      "Oferecemos suporte técnico 24/7, gerentes de conta dedicados para clientes hospitalares, documentação completa da API e assistência de integração para implementação rápida em ambiente hospitalar.",
+      "Suporte técnico 24/7, gerente de conta dedicado, SLA de 99.9% de uptime, monitoramento proativo e relatórios executivos mensais com métricas de performance e ROI para apresentação à diretoria.",
   },
   {
-    question: "Os dados médicos estão seguros com nossa API?",
+    question: "A solução escala para redes hospitalares grandes?",
     answer:
-      "Absolutamente. Utilizamos criptografia de nível hospitalar, conformidade HIPAA e LGPD, auditorias de segurança regulares e armazenamento em data centers certificados. Todos os dados são processados com máxima segurança e privacidade.",
+      "Absolutamente. Nossa arquitetura cloud suporta milhares de laudos simultâneos, multi-tenancy para diferentes unidades, dashboards centralizados e APIs para integração com ERPs hospitalares e sistemas de gestão.",
   },
   {
-    question: "Como começar a usar a API de Laudos IA?",
+    question: "Como iniciar um projeto piloto na minha instituição?",
     answer:
-      "É simples! Entre em contato com nossa equipe comercial, configure seu ambiente de teste, e nossa equipe técnica ajudará você a implementar a primeira integração em seu sistema hospitalar em 48 horas.",
+      "Agende uma demonstração executiva, definimos um projeto piloto de 30 dias sem custo, implementamos em uma unidade específica e apresentamos relatório completo de ROI para decisão de expansão institucional.",
   },
 ]
 
@@ -68,12 +68,12 @@ export default function FAQSection() {
         {/* Left Column - Header */}
         <div className="w-full lg:flex-1 flex flex-col justify-center items-start gap-4 lg:py-5">
           <div className="w-full flex flex-col justify-center text-[#49423D] font-semibold leading-tight md:leading-[44px] font-sans text-4xl tracking-tight">
-            Perguntas Frequentes
+            Dúvidas de administradores
           </div>
           <div className="w-full text-[#605A57] text-base font-normal leading-7 font-sans">
-            Integre nossa API, automatize laudos,
+            Entenda como nossa API reduz custos,
             <br className="hidden md:block" />
-            transforme seu fluxo de trabalho médico.
+            acelera diagnósticos e maximiza ROI.
           </div>
         </div>
 

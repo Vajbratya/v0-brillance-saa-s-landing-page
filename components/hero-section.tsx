@@ -9,11 +9,11 @@ export function HeroSection() {
           <div className="max-w-[937px] flex flex-col items-center gap-3">
             <div className="flex flex-col items-center gap-6">
               <h1 className="max-w-[748px] text-center text-[#37322f] text-5xl md:text-[80px] font-normal leading-tight md:leading-[96px] font-serif">
-                API de Laudos.ai para Empresas
+                Transforme sua operação hospitalar
               </h1>
               <p className="max-w-[506px] text-center text-[#37322f]/80 text-lg font-medium leading-7">
-                Automatize a geração de laudos inteligentes com nossa API de IA. Integração simples, resultados precisos
-                e escalabilidade empresarial.
+                Reduza custos operacionais, acelere diagnósticos e otimize fluxos de trabalho com nossa API de laudos
+                inteligentes. ROI comprovado em 90 dias.
               </p>
             </div>
           </div>
@@ -21,7 +21,7 @@ export function HeroSection() {
           {/* CTA Button */}
           <div className="flex justify-center">
             <Button className="h-10 px-12 bg-[#37322f] hover:bg-[#37322f]/90 text-white rounded-full font-medium text-sm shadow-[0px_0px_0px_2.5px_rgba(255,255,255,0.08)_inset]">
-              Começar gratuitamente
+              Agendar demonstração
             </Button>
           </div>
         </div>
